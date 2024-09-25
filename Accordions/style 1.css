@@ -1,0 +1,46 @@
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   background-color: rgb(246, 246, 246);
+   
+   background-repeat: no-repeat;
+}
+
+.page{
+    display: flex;
+}
+.header{
+    width: 400px;
+    height: 200px;
+}
+
+.col1 {
+    width: 20%;
+    height: 100vh;
+    background-color: dimgrey;
+    text-decoration: none;
+    text-emphasis-color: white;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.col1 h1{
+    text-align: center;
+}
+.col1 a{
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+table, th, td{
+    border: 1px solid black;
+    height: 60%;
+    width: 20%;
+}
+.col2 {
+    display: inline-block;
+}

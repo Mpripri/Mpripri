@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <link rel="stylesheet" href="ex3.css">
+</head>
+<h1>Array 3x3-Exibir os valores digitados e o maior valor entre eles</h1>
+<body>
+    <script>
+      
+        let matriz = Array.from({ length: 3 }, () => Array(3).fill(0));
+
+        matriz.forEach((linha, i) => {
+            linha.forEach((_, j) => {
+                matriz[i][j] = Number(prompt(`Digite o valor para matriz[${i}][${j}]:`));
+            });
+        });
+
+      
+        document.write("<h3>Tabela dos valores:</h3>");
+        matriz.forEach(linha => {
+            document.write(linha.join(' ') + '<br>');
+        });
+
+        const maiorValor = matriz.flat().reduce((max, val) => (val > max ? val : max), matriz[0][0]);
+        document.write(`<p>Maior valor entre eles: ${maiorValor}</p>`);
+    </script>
+</body>
+</html>
